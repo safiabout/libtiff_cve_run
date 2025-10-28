@@ -34,6 +34,30 @@ gdb:
 gdb --args /src/build/tools/tiffinfo -c /root/fuzz_runs/libtiff_out/default/crashes/[example crash] [id:000001,sig:11,src:001033,time:829345,execs:1375582,op:havoc,rep:6]
 ```
 
+```
+TIFF Directory at offset 0xa (10)
+  Image Width: 1 Image Length: 1
+  Bits/Sample: 1
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  FillOrder: msb-to-lsb
+  Samples/Pixel: 8
+  Planar Configuration: single image plane
+  Transfer Function:
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000776a37a7a01b in TIFFPrintDirectory (tif=0x619e312892a0, fd=0x776a378c15c0 <_IO_2_1_stdout_>, flags=6)
+    at /src/libtiff/tif_print.c:551
+551                                                 td->td_transferfunction[i][l]);
+(gdb) bt
+#0  0x0000776a37a7a01b in TIFFPrintDirectory (tif=0x619e312892a0, fd=0x776a378c15c0 <_IO_2_1_stdout_>, flags=6)
+    at /src/libtiff/tif_print.c:551
+#1  0x0000619e0ba344d6 in tiffinfo (tif=0x619e312892a0, order=0, flags=6, is_image=1) at /src/tools/tiffinfo.c:463
+#2  0x0000619e0ba3405a in main (argc=3, argv=0x7ffd709e1288) at /src/tools/tiffinfo.c:152
+(gdb)
+```
+[crash_1_cve_2018](/Users/safiaboutaleb/Developer/tiff-4.0.9/my_crashes/crash_1_cve_2017.tif)
+
 * [CVE-2017-18013](http://bugzilla.maptools.org/show_bug.cgi?id=2770)
 * [Patch Commit](https://gitlab.com/libtiff/libtiff/-/commit/c6f41df7b581402dfba3c19a1e3df4454c551a01)
 ```
@@ -70,7 +94,6 @@ bt
 to download tiff file:
 docker ps -a
 docker cp <container>:"/root/fuzz_runs/libtiff_out/default/crashes/id:000000,sig:11,src:000314,time:28265,execs:68083,op:havoc,rep:3" ./crash.tif
-
 ```
 
 ```
