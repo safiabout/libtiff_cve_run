@@ -56,7 +56,7 @@ Program received signal SIGSEGV, Segmentation fault.
 #2  0x0000619e0ba3405a in main (argc=3, argv=0x7ffd709e1288) at /src/tools/tiffinfo.c:152
 (gdb)
 ```
-[crash_1_cve_2018](/Users/safiaboutaleb/Developer/tiff-4.0.9/my_crashes/crash_1_cve_2017.tif)
+[crash_1_cve_2018](/Users/safiaboutaleb/Developer/tiff-4.0.9/my_crashes/crash_1_cve_2018.tif)
 
 * [CVE-2017-18013](http://bugzilla.maptools.org/show_bug.cgi?id=2770)
 * [Patch Commit](https://gitlab.com/libtiff/libtiff/-/commit/c6f41df7b581402dfba3c19a1e3df4454c551a01)
