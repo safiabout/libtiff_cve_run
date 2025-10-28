@@ -1,0 +1,1 @@
+/AFLplusplus/afl-clang-fast++ -fPIC -g -O0 -Wl,--version-script=/src/libtiff/libtiffxx.map -shared -Wl,-soname,libtiffxx.so.5 -o libtiffxx.so.5.3.0 CMakeFiles/tiffxx.dir/tif_stream.cxx.o  -Wl,-rpath,/src/build/libtiff: libtiff.so.5.3.0 -lm -lz 
