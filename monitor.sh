@@ -9,6 +9,9 @@ CRASH_DIR="/root/fuzz_runs/libtiff_out/default/crashes"
 HARNESS="./harness/harness"              
 TARGET_PROG="./target"  
 
+# AFL treat exit(101) as a crash by default
+export AFL_CRASH_EXITCODE='101' 
+
 # Stop fuzzing when target return this code
 MAGIC=67 # range 64-125 is for user-defined exit codes
 
