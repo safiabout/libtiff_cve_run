@@ -4,49 +4,33 @@ set confirm off
 
 file ./bug
 
-# Adjust this line to wherever you want to break:
-break bug.c:25
+# Make sure this line matches the CAPTURE_STATE line in bug.c
+# Use your editor or 'nl -ba bug.c | sed -n "20,40p"' to check.
+break bug.c:27
 
 define dump_state
 python
 import gdb, json
 
-frame = gdb.selected_frame()
-block = frame.block()
+def parse_vars(text):
+    vars = {}
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or '=' not in line:
+            continue
+        name, val = line.split('=', 1)
+        name = name.strip()
+        val = val.strip()
+        # Avoid duplicate entries; locals override args if same name
+        vars[name] = val
+    return vars
+
+args_out   = gdb.execute("info args",   to_string=True)
+locals_out = gdb.execute("info locals", to_string=True)
 
 vars = {}
-
-b = block
-while b is not None:
-    # If you *only* want locals/args, you can stop at global block:
-    # if b.is_global:
-    #     break
-
-    for sym in b:
-        # Some items in the block iterator may not be real Symbols
-        try:
-            if not isinstance(sym, gdb.Symbol):
-                continue
-        except Exception:
-            continue
-
-        if not sym.is_variable:
-            continue
-
-        name = sym.name
-        if not name:
-            continue
-
-        if name in vars:
-            continue
-
-        try:
-            val = sym.value(frame)
-            vars[name] = str(val)
-        except Exception:
-            vars[name] = "<unavailable>"
-
-    b = b.superblock
+vars.update(parse_vars(args_out))
+vars.update(parse_vars(locals_out))
 
 print("STATE_JSON " + json.dumps(vars))
 end
