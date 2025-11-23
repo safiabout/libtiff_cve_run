@@ -28,32 +28,36 @@ def load_states():
     return records
 
 def classify_var(name, val):
-    """
-    Given a variable name and its string value from gdb,
-    decide how to turn it into a C boolean condition.
-    Returns a C expression as a string, or None to ignore.
-    """
-
-    # Ignore some gdb noise if it ever appears.
+    # Ignore weird gdb temporaries if they ever show
     if name.startswith("$"):
         return None
 
-    # Pointer heuristics
+    # NULL pointer representations
     if val == "(nil)":
         return f"({name} == NULL)"
     if val.startswith("0x"):
-        # non-null pointer
-        return f"({name} != NULL)"
+        try:
+            addr = int(val, 16)
+        except ValueError:
+            addr = None
+        if addr == 0:
+            # 0x0 is NULL
+            return f"({name} == NULL)"
+        else:
+            # non-null pointer
+            return f"({name} != NULL)"
 
     # Try to parse integer
     try:
-        iv = int(val, 0)  # handles decimal, 0x, etc.
+        iv = int(val, 0)   # decimal, hex, etc.
         return f"({name} == {iv})"
     except ValueError:
         pass
 
     # Anything else: ignore for now (strings, structs, etc.)
     return None
+
+
 
 def condition_from_state(state, idx):
     """
