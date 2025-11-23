@@ -1,47 +1,59 @@
 # file: collect_state.py
 import subprocess
 import sys
+import json
 import re
 from pathlib import Path
 
-STATE_RE = re.compile(
-    r"STATE\s+(?P<file>[^:]+):(?P<line>\d+)\s+"
-    r"p=(?P<p>0x[0-9a-fA-F]+|\(nil\))\s+"
-    r"n=(?P<n>-?\d+)\s+i=(?P<i>-?\d+)"
-)
+STATE_RE = re.compile(r"STATE_JSON (.*)$")
 
-def run_and_capture(list_len, n):
-    proc = subprocess.run(
-        ["./bug", str(list_len), str(n)],
-        capture_output=True, text=True
-    )
+def run_and_capture(argv):
+    """
+    Run: gdb -batch -x break.gdb --args ./bug <argv...>
+    Return the last STATE_JSON dict, or None.
+    """
+    cmd = ["gdb", "-q", "-batch", "-x", "break.gdb", "--args", "./bug"] + argv
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+
     output = proc.stdout + proc.stderr
+
     last_state = None
     for line in output.splitlines():
         m = STATE_RE.search(line)
-        if m:
-            last_state = m.groupdict()
+        if not m:
+            continue
+        try:
+            data = json.loads(m.group(1))
+            last_state = data
+        except json.JSONDecodeError:
+            continue
+
     if last_state is None:
-        print("No STATE captured for input", list_len, n, file=sys.stderr)
-        return None
-    last_state["p_is_null"] = 1 if last_state["p"] == "(nil)" else 0
-    last_state["n"] = int(last_state["n"])
-    last_state["i"] = int(last_state["i"])
+        print("No STATE_JSON captured for args", argv, file=sys.stderr)
+    else:
+        print("Captured STATE_JSON:", last_state)
     return last_state
 
-def append_log(state, list_len, n):
-    log_path = Path("crash_states.csv")
+def append_log(state, argv):
+    """
+    Append to crash_states.jsonl as one JSON object per line.
+    We store both the input argv and the state.
+    """
+    log_path = Path("crash_states.jsonl")
+    rec = {
+        "argv": argv,
+        "state": state,
+    }
     with log_path.open("a") as f:
-        f.write(f"{list_len},{n},{state['p_is_null']},{state['n']},{state['i']}\n")
+        f.write(json.dumps(rec) + "\n")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("usage: collect_state.py <list_len> <n>")
+    # Example usage: python3 collect_state_gdb.py 1 3
+    if len(sys.argv) < 2:
+        print("usage: collect_state_gdb.py <program-args...>")
         sys.exit(1)
-    list_len = int(sys.argv[1])
-    n = int(sys.argv[2])
 
-    s = run_and_capture(list_len, n)
-    if s is not None:
-        append_log(s, list_len, n)
-        print("Captured:", s)
+    prog_args = sys.argv[1:]
+    state = run_and_capture(prog_args)
+    if state is not None:
+        append_log(state, prog_args)
