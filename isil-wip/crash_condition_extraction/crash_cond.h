@@ -2,10 +2,13 @@
 #ifndef CRASH_COND_H
 #define CRASH_COND_H
 
-// Start with no crash condition.
-#define CRASH_COND(p,n,i) (0)
-#define CRASH_ASSERT(p,n,i) do { \
-assert(!CRASH_COND(p,n,i));  \
+// Initially: no crash condition known.
+#define CRASH_COND() (0)
+
+#define CRASH_ASSERT() do {                          \
+if (CRASH_COND()) {                              \
+assert(!"Crash condition hit (auto-gen)");   \
+}                                                \
 } while (0)
 
 #endif

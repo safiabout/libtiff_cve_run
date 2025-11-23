@@ -9,23 +9,24 @@ struct Node {
     struct Node *next;
 };
 
+// Optional: you can keep this if you still want manual prints.
+// Or delete it entirely and rely only on gdb JSON.
 #define CAPTURE_STATE(...) capture_state(__FILE__, __LINE__, __VA_ARGS__)
 void capture_state(const char *file, int line,
                    struct Node *p, int n, int i) {
-    // You can make this JSON if you want; keeping it simple first.
     printf("STATE %s:%d p=%p n=%d i=%d\n", file, line, (void*)p, n, i);
     fflush(stdout);
 }
 
-// This header will be auto-generated/updated by your script.
+// Auto-generated/updated by your script.
 #include "crash_cond.h"
 
 int crash(struct Node *head, int n) {
     struct Node *p = head;
     for (int i = 0; i < n; i++) {
         // ---- TARGET LINE ----
-        CAPTURE_STATE(p, n, i);
-        CRASH_ASSERT(p, n, i);   // macro from crash_cond.h
+        CAPTURE_STATE(p, n, i);   // optional
+        CRASH_ASSERT();           // <--- no params
 
         // BUG: might deref NULL
         p = p->next;
@@ -36,7 +37,7 @@ int crash(struct Node *head, int n) {
 struct Node *make_list(int len) {
     if (len <= 0) return NULL;
     struct Node *head = NULL, *tail = NULL;
-    for (int i=0; i<len; i++) {
+    for (int i = 0; i < len; i++) {
         struct Node *node = malloc(sizeof(*node));
         node->val = i;
         node->next = NULL;
