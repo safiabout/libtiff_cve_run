@@ -6,7 +6,7 @@ file ./bug
 
 # Make sure this line matches the CAPTURE_STATE line in bug.c
 # Use your editor or 'nl -ba bug.c | sed -n "20,40p"' to check.
-break bug.c:27
+break bug.c:25
 
 define dump_state
 python
