@@ -1,12 +1,13 @@
 # file: collect_state.py
 import subprocess
 import sys
-import json
 import re
 import struct
+import json
 from pathlib import Path
 
-STATE_RE = re.compile(r"STATE_JSON (.*)$")
+STATE_START = "STATE_START"
+STATE_END = "STATE_END"
 
 def run_and_capture(a, b):
     # 1. Write 8 bytes of input for stdin: two little-endian int32s
@@ -23,19 +24,51 @@ def run_and_capture(a, b):
         )
 
     output = proc.stdout + proc.stderr
+    state = extract_last_state(output)
+    return state, output
 
-    last_state = None
-    for line in output.splitlines():
-        m = STATE_RE.search(line)
-        if not m:
+def extract_last_state(output: str):
+    """
+    Find the last block between STATE_START/STATE_END and parse
+    'name = value' lines into a dict.
+    """
+    lines = output.splitlines()
+    blocks = []
+    current = None
+
+    for line in lines:
+        if STATE_START in line:
+            current = []
+        elif STATE_END in line:
+            if current is not None:
+                blocks.append(current)
+                current = None
+        elif current is not None:
+            current.append(line)
+
+    if not blocks:
+        return None
+
+    # Take the last block as the crash state
+    last_block = blocks[-1]
+    return parse_vars_block(last_block)
+
+def parse_vars_block(lines):
+    """
+    Parse gdb 'info args'/'info locals' style lines:
+        name = value
+    into a dict {name: value_str}.
+    """
+    vars = {}
+    for line in lines:
+        line = line.strip()
+        if not line or '=' not in line:
             continue
-        try:
-            data = json.loads(m.group(1))
-            last_state = data
-        except json.JSONDecodeError:
-            pass
-
-    return last_state, output
+        name, val = line.split('=', 1)
+        name = name.strip()
+        val = val.strip()
+        vars[name] = val
+    return vars
 
 def append_log(state, a, b):
     log_path = Path("crash_states.jsonl")
@@ -53,8 +86,8 @@ if __name__ == "__main__":
 
     state, out = run_and_capture(a, b)
     if state is None:
-        print("No STATE_JSON captured for args", [a, b])
-        # optional: uncomment to debug gdb output
+        print("No STATE block captured for args", [a, b])
+        # uncomment to debug
         # print("GDB OUTPUT:\n", out)
         sys.exit(1)
 
