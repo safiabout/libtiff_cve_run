@@ -675,63 +675,54 @@ tiff_OBJECTS = \
 # External object files for target tiff
 tiff_EXTERNAL_OBJECTS =
 
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_aux.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_close.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_codec.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_color.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_compress.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_dir.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_dirinfo.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_dirread.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_dirwrite.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_dumpmode.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_error.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_extension.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_fax3.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_fax3sm.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_flush.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_getimage.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_jpeg.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_next.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_open.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_print.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_read.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_version.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_write.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/__/port/dummy.c.o
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/build.make
-libtiff/libtiff.so.5.3.0: /usr/lib/x86_64-linux-gnu/libm.so
-libtiff/libtiff.so.5.3.0: /usr/lib/x86_64-linux-gnu/libz.so
-libtiff/libtiff.so.5.3.0: /src/libtiff/libtiff.def
-libtiff/libtiff.so.5.3.0: libtiff/CMakeFiles/tiff.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking C shared library libtiff.so"
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_aux.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_close.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_codec.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_color.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_compress.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_dir.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_dirinfo.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_dirread.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_dirwrite.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_dumpmode.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_error.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_extension.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_fax3.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_fax3sm.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_flush.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_getimage.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_jpeg.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/__/port/dummy.c.o
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/build.make
+libtiff/libtiff.a: libtiff/CMakeFiles/tiff.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking C static library libtiff.a"
+	cd /src/build/libtiff && $(CMAKE_COMMAND) -P CMakeFiles/tiff.dir/cmake_clean_target.cmake
 	cd /src/build/libtiff && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tiff.dir/link.txt --verbose=$(VERBOSE)
-	cd /src/build/libtiff && $(CMAKE_COMMAND) -E cmake_symlink_library libtiff.so.5.3.0 libtiff.so.5 libtiff.so
-
-libtiff/libtiff.so.5: libtiff/libtiff.so.5.3.0
-	@$(CMAKE_COMMAND) -E touch_nocreate libtiff/libtiff.so.5
-
-libtiff/libtiff.so: libtiff/libtiff.so.5.3.0
-	@$(CMAKE_COMMAND) -E touch_nocreate libtiff/libtiff.so
 
 # Rule to build all files generated by this target.
-libtiff/CMakeFiles/tiff.dir/build: libtiff/libtiff.so
+libtiff/CMakeFiles/tiff.dir/build: libtiff/libtiff.a
 .PHONY : libtiff/CMakeFiles/tiff.dir/build
 
 libtiff/CMakeFiles/tiff.dir/clean:

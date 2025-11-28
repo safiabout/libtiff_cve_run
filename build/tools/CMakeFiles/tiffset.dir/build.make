@@ -92,7 +92,7 @@ tiffset_EXTERNAL_OBJECTS =
 
 tools/tiffset: tools/CMakeFiles/tiffset.dir/tiffset.c.o
 tools/tiffset: tools/CMakeFiles/tiffset.dir/build.make
-tools/tiffset: libtiff/libtiff.so.5.3.0
+tools/tiffset: libtiff/libtiff.a
 tools/tiffset: port/libport.a
 tools/tiffset: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffset: /usr/lib/x86_64-linux-gnu/libz.so

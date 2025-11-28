@@ -92,7 +92,7 @@ tiff2pdf_EXTERNAL_OBJECTS =
 
 tools/tiff2pdf: tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.o
 tools/tiff2pdf: tools/CMakeFiles/tiff2pdf.dir/build.make
-tools/tiff2pdf: libtiff/libtiff.so.5.3.0
+tools/tiff2pdf: libtiff/libtiff.a
 tools/tiff2pdf: port/libport.a
 tools/tiff2pdf: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiff2pdf: /usr/lib/x86_64-linux-gnu/libz.so

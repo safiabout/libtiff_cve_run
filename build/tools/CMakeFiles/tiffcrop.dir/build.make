@@ -92,7 +92,7 @@ tiffcrop_EXTERNAL_OBJECTS =
 
 tools/tiffcrop: tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.o
 tools/tiffcrop: tools/CMakeFiles/tiffcrop.dir/build.make
-tools/tiffcrop: libtiff/libtiff.so.5.3.0
+tools/tiffcrop: libtiff/libtiff.a
 tools/tiffcrop: port/libport.a
 tools/tiffcrop: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffcrop: /usr/lib/x86_64-linux-gnu/libz.so

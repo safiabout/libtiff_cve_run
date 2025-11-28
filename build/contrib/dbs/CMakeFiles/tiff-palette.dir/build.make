@@ -92,7 +92,7 @@ tiff__palette_EXTERNAL_OBJECTS =
 
 contrib/dbs/tiff-palette: contrib/dbs/CMakeFiles/tiff-palette.dir/tiff-palette.c.o
 contrib/dbs/tiff-palette: contrib/dbs/CMakeFiles/tiff-palette.dir/build.make
-contrib/dbs/tiff-palette: libtiff/libtiff.so.5.3.0
+contrib/dbs/tiff-palette: libtiff/libtiff.a
 contrib/dbs/tiff-palette: port/libport.a
 contrib/dbs/tiff-palette: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/dbs/tiff-palette: /usr/lib/x86_64-linux-gnu/libz.so

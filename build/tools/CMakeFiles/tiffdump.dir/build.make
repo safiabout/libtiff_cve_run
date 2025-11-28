@@ -92,7 +92,7 @@ tiffdump_EXTERNAL_OBJECTS =
 
 tools/tiffdump: tools/CMakeFiles/tiffdump.dir/tiffdump.c.o
 tools/tiffdump: tools/CMakeFiles/tiffdump.dir/build.make
-tools/tiffdump: libtiff/libtiff.so.5.3.0
+tools/tiffdump: libtiff/libtiff.a
 tools/tiffdump: port/libport.a
 tools/tiffdump: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffdump: /usr/lib/x86_64-linux-gnu/libz.so

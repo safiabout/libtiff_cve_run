@@ -92,7 +92,7 @@ fax2ps_EXTERNAL_OBJECTS =
 
 tools/fax2ps: tools/CMakeFiles/fax2ps.dir/fax2ps.c.o
 tools/fax2ps: tools/CMakeFiles/fax2ps.dir/build.make
-tools/fax2ps: libtiff/libtiff.so.5.3.0
+tools/fax2ps: libtiff/libtiff.a
 tools/fax2ps: port/libport.a
 tools/fax2ps: /usr/lib/x86_64-linux-gnu/libm.so
 tools/fax2ps: /usr/lib/x86_64-linux-gnu/libz.so

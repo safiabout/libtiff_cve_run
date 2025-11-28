@@ -92,7 +92,7 @@ tiffdither_EXTERNAL_OBJECTS =
 
 tools/tiffdither: tools/CMakeFiles/tiffdither.dir/tiffdither.c.o
 tools/tiffdither: tools/CMakeFiles/tiffdither.dir/build.make
-tools/tiffdither: libtiff/libtiff.so.5.3.0
+tools/tiffdither: libtiff/libtiff.a
 tools/tiffdither: port/libport.a
 tools/tiffdither: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffdither: /usr/lib/x86_64-linux-gnu/libz.so

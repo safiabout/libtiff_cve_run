@@ -148,7 +148,8 @@ main(int argc, char* argv[])
 			} else {
 				do {
 					toff_t offset=0;
-
+					
+					// if flags & TIFF_STRPIS
 					tiffinfo(tif, order, flags, 1);
 					if (TIFFGetField(tif, TIFFTAG_EXIFIFD,
 							 &offset)) {

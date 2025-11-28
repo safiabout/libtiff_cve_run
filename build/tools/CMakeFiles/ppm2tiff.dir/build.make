@@ -92,7 +92,7 @@ ppm2tiff_EXTERNAL_OBJECTS =
 
 tools/ppm2tiff: tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.o
 tools/ppm2tiff: tools/CMakeFiles/ppm2tiff.dir/build.make
-tools/ppm2tiff: libtiff/libtiff.so.5.3.0
+tools/ppm2tiff: libtiff/libtiff.a
 tools/ppm2tiff: port/libport.a
 tools/ppm2tiff: /usr/lib/x86_64-linux-gnu/libm.so
 tools/ppm2tiff: /usr/lib/x86_64-linux-gnu/libz.so

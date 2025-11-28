@@ -92,7 +92,7 @@ tiff2rgba_EXTERNAL_OBJECTS =
 
 tools/tiff2rgba: tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.o
 tools/tiff2rgba: tools/CMakeFiles/tiff2rgba.dir/build.make
-tools/tiff2rgba: libtiff/libtiff.so.5.3.0
+tools/tiff2rgba: libtiff/libtiff.a
 tools/tiff2rgba: port/libport.a
 tools/tiff2rgba: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiff2rgba: /usr/lib/x86_64-linux-gnu/libz.so

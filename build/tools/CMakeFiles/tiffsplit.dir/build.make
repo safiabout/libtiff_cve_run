@@ -92,7 +92,7 @@ tiffsplit_EXTERNAL_OBJECTS =
 
 tools/tiffsplit: tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.o
 tools/tiffsplit: tools/CMakeFiles/tiffsplit.dir/build.make
-tools/tiffsplit: libtiff/libtiff.so.5.3.0
+tools/tiffsplit: libtiff/libtiff.a
 tools/tiffsplit: port/libport.a
 tools/tiffsplit: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffsplit: /usr/lib/x86_64-linux-gnu/libz.so

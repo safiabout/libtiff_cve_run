@@ -92,7 +92,7 @@ tiff__rgb_EXTERNAL_OBJECTS =
 
 contrib/dbs/tiff-rgb: contrib/dbs/CMakeFiles/tiff-rgb.dir/tiff-rgb.c.o
 contrib/dbs/tiff-rgb: contrib/dbs/CMakeFiles/tiff-rgb.dir/build.make
-contrib/dbs/tiff-rgb: libtiff/libtiff.so.5.3.0
+contrib/dbs/tiff-rgb: libtiff/libtiff.a
 contrib/dbs/tiff-rgb: port/libport.a
 contrib/dbs/tiff-rgb: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/dbs/tiff-rgb: /usr/lib/x86_64-linux-gnu/libz.so

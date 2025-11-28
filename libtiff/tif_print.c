@@ -656,7 +656,7 @@ TIFFPrintDirectory(TIFF* tif, FILE* fd, long flags)
 
         _TIFFFillStriles( tif );
         
-	if ((flags & TIFFPRINT_STRIPS) &&
+	if ((flags & TIFFPRINT_STRIPS) && 
 	    TIFFFieldSet(tif,FIELD_STRIPOFFSETS)) {
 		uint32 s;
 

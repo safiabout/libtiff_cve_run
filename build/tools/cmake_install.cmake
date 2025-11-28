@@ -60,10 +60,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/fax2ps")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/fax2ps" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/fax2ps")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/fax2ps"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/fax2ps")
     endif()
@@ -88,10 +84,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/fax2tiff")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/fax2tiff" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/fax2tiff")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/fax2tiff"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/fax2tiff")
     endif()
@@ -116,10 +108,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/pal2rgb")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/pal2rgb" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/pal2rgb")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/pal2rgb"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/pal2rgb")
     endif()
@@ -144,10 +132,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/ppm2tiff")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/ppm2tiff" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/ppm2tiff")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/ppm2tiff"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/ppm2tiff")
     endif()
@@ -172,10 +156,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/raw2tiff")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/raw2tiff" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/raw2tiff")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/raw2tiff"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/raw2tiff")
     endif()
@@ -200,10 +180,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiff2bw")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiff2bw" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiff2bw")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiff2bw"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiff2bw")
     endif()
@@ -228,10 +204,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiff2pdf")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiff2pdf" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiff2pdf")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiff2pdf"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiff2pdf")
     endif()
@@ -256,10 +228,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiff2ps")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiff2ps" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiff2ps")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiff2ps"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiff2ps")
     endif()
@@ -284,10 +252,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiff2rgba")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiff2rgba" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiff2rgba")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiff2rgba"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiff2rgba")
     endif()
@@ -312,10 +276,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffcmp")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffcmp" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffcmp")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffcmp"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffcmp")
     endif()
@@ -340,10 +300,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffcp")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffcp" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffcp")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffcp"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffcp")
     endif()
@@ -368,10 +324,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffcrop")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffcrop" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffcrop")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffcrop"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffcrop")
     endif()
@@ -396,10 +348,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffdither")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffdither" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffdither")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffdither"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffdither")
     endif()
@@ -424,10 +372,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffdump")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffdump" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffdump")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffdump"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffdump")
     endif()
@@ -452,10 +396,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffinfo")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffinfo" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffinfo")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffinfo"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffinfo")
     endif()
@@ -480,10 +420,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffmedian")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffmedian" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffmedian")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffmedian"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffmedian")
     endif()
@@ -508,10 +444,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffset")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffset" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffset")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffset"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffset")
     endif()
@@ -536,10 +468,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/src/build/tools/tiffsplit")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/tiffsplit" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/tiffsplit")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/tiffsplit"
-         OLD_RPATH "/src/build/libtiff:"
-         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/tiffsplit")
     endif()

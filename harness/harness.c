@@ -60,8 +60,15 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
     FILE* devnull = fopen("/dev/null", "w");
 
     if (devnull) {
+
+        // flags for CVE 2018
+        int flags = TIFFPRINT_COLORMAP | TIFFPRINT_CURVES;
+
+        // // flags for CVE 2017
+        // int flags = TIFFPRINT_STRIPS
+
         do {
-            TIFFPrintDirectory(tif, devnull, TIFFPRINT_STRIPS);
+            TIFFPrintDirectory(tif, devnull, flags);
         } while (TIFFReadDirectory(tif));
 
         fclose(devnull);

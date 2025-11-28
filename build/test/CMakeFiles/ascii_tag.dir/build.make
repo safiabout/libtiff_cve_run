@@ -92,7 +92,7 @@ ascii_tag_EXTERNAL_OBJECTS =
 
 test/ascii_tag: test/CMakeFiles/ascii_tag.dir/ascii_tag.c.o
 test/ascii_tag: test/CMakeFiles/ascii_tag.dir/build.make
-test/ascii_tag: libtiff/libtiff.so.5.3.0
+test/ascii_tag: libtiff/libtiff.a
 test/ascii_tag: port/libport.a
 test/ascii_tag: /usr/lib/x86_64-linux-gnu/libm.so
 test/ascii_tag: /usr/lib/x86_64-linux-gnu/libz.so

@@ -92,7 +92,7 @@ tiff__bi_EXTERNAL_OBJECTS =
 
 contrib/dbs/tiff-bi: contrib/dbs/CMakeFiles/tiff-bi.dir/tiff-bi.c.o
 contrib/dbs/tiff-bi: contrib/dbs/CMakeFiles/tiff-bi.dir/build.make
-contrib/dbs/tiff-bi: libtiff/libtiff.so.5.3.0
+contrib/dbs/tiff-bi: libtiff/libtiff.a
 contrib/dbs/tiff-bi: port/libport.a
 contrib/dbs/tiff-bi: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/dbs/tiff-bi: /usr/lib/x86_64-linux-gnu/libz.so

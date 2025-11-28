@@ -92,7 +92,7 @@ raw2tiff_EXTERNAL_OBJECTS =
 
 tools/raw2tiff: tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.o
 tools/raw2tiff: tools/CMakeFiles/raw2tiff.dir/build.make
-tools/raw2tiff: libtiff/libtiff.so.5.3.0
+tools/raw2tiff: libtiff/libtiff.a
 tools/raw2tiff: port/libport.a
 tools/raw2tiff: /usr/lib/x86_64-linux-gnu/libm.so
 tools/raw2tiff: /usr/lib/x86_64-linux-gnu/libz.so

@@ -124,7 +124,7 @@ test/strip_rw: test/CMakeFiles/strip_rw.dir/strip_rw.c.o
 test/strip_rw: test/CMakeFiles/strip_rw.dir/strip.c.o
 test/strip_rw: test/CMakeFiles/strip_rw.dir/test_arrays.c.o
 test/strip_rw: test/CMakeFiles/strip_rw.dir/build.make
-test/strip_rw: libtiff/libtiff.so.5.3.0
+test/strip_rw: libtiff/libtiff.a
 test/strip_rw: port/libport.a
 test/strip_rw: /usr/lib/x86_64-linux-gnu/libm.so
 test/strip_rw: /usr/lib/x86_64-linux-gnu/libz.so

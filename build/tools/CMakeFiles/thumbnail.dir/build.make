@@ -92,7 +92,7 @@ thumbnail_EXTERNAL_OBJECTS =
 
 tools/thumbnail: tools/CMakeFiles/thumbnail.dir/thumbnail.c.o
 tools/thumbnail: tools/CMakeFiles/thumbnail.dir/build.make
-tools/thumbnail: libtiff/libtiff.so.5.3.0
+tools/thumbnail: libtiff/libtiff.a
 tools/thumbnail: port/libport.a
 tools/thumbnail: /usr/lib/x86_64-linux-gnu/libm.so
 tools/thumbnail: /usr/lib/x86_64-linux-gnu/libz.so

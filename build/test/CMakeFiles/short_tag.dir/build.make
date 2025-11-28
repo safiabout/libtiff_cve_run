@@ -108,7 +108,7 @@ short_tag_EXTERNAL_OBJECTS =
 test/short_tag: test/CMakeFiles/short_tag.dir/short_tag.c.o
 test/short_tag: test/CMakeFiles/short_tag.dir/check_tag.c.o
 test/short_tag: test/CMakeFiles/short_tag.dir/build.make
-test/short_tag: libtiff/libtiff.so.5.3.0
+test/short_tag: libtiff/libtiff.a
 test/short_tag: port/libport.a
 test/short_tag: /usr/lib/x86_64-linux-gnu/libm.so
 test/short_tag: /usr/lib/x86_64-linux-gnu/libz.so

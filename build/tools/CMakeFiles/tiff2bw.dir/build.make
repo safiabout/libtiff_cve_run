@@ -92,7 +92,7 @@ tiff2bw_EXTERNAL_OBJECTS =
 
 tools/tiff2bw: tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.o
 tools/tiff2bw: tools/CMakeFiles/tiff2bw.dir/build.make
-tools/tiff2bw: libtiff/libtiff.so.5.3.0
+tools/tiff2bw: libtiff/libtiff.a
 tools/tiff2bw: port/libport.a
 tools/tiff2bw: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiff2bw: /usr/lib/x86_64-linux-gnu/libz.so

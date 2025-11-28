@@ -92,7 +92,7 @@ custom_dir_EXTERNAL_OBJECTS =
 
 test/custom_dir: test/CMakeFiles/custom_dir.dir/custom_dir.c.o
 test/custom_dir: test/CMakeFiles/custom_dir.dir/build.make
-test/custom_dir: libtiff/libtiff.so.5.3.0
+test/custom_dir: libtiff/libtiff.a
 test/custom_dir: port/libport.a
 test/custom_dir: /usr/lib/x86_64-linux-gnu/libm.so
 test/custom_dir: /usr/lib/x86_64-linux-gnu/libz.so

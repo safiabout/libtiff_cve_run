@@ -92,7 +92,7 @@ tiffcmp_EXTERNAL_OBJECTS =
 
 tools/tiffcmp: tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.o
 tools/tiffcmp: tools/CMakeFiles/tiffcmp.dir/build.make
-tools/tiffcmp: libtiff/libtiff.so.5.3.0
+tools/tiffcmp: libtiff/libtiff.a
 tools/tiffcmp: port/libport.a
 tools/tiffcmp: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffcmp: /usr/lib/x86_64-linux-gnu/libz.so

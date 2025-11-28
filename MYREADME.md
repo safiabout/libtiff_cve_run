@@ -17,7 +17,10 @@ cd build
 export CC=/AFLplusplus/afl-clang-fast
 export CXX=/AFLplusplus/afl-clang-fast++
 cmake -DCMAKE_C_COMPILER="$CC" -DCMAKE_CXX_COMPILER="$CXX" \
-      -DCMAKE_C_FLAGS="-g -O0" -DCMAKE_CXX_FLAGS="-g -O0" ..
+      -DCMAKE_C_FLAGS="-g -O0" -DCMAKE_CXX_FLAGS="-g -O0" -DBUILD_SHARED_LIBS=OFF ..
+
+
+`afl-cc -o harness_bin -fsanitize=fuzzer harness/harness.c ../build/libtiff/libtiff.a -I../libtiff -I../build/libtiff -lz -lm Ddd`
 
 make -j$(nproc)
 
@@ -118,3 +121,45 @@ Program received signal SIGSEGV, Segmentation fault.
 ```
 
 [crash_1_cve_2017](/Users/safiaboutaleb/Developer/tiff-4.0.9/my_crashes/crash_1_cve_2017.tif)
+
+## Understanding Code Notes
+
+TIFFPrintDirectory prints a lot of information about a TIFF image. Its signature is:
+`void TIFFPrintDirectory(TIFF* tif, FILE* fd, long flags)`
+* tif → pointer to the TIFF struct (the core object representing an opened TIFF file)
+* fd → a FILE* stream (usually stdout or a file)
+* flags → long integer controlling output (like whether to print colormap, strips, curves, etc.)
+
+Most of the function is just printing fields in the tif->tif_dir struct. So fuzzing it mainly involves creating valid or semi-valid TIFF structs in memory with varying contents.
+
+Key points:
+
+* It uses a lot of arrays, (td_colormap, td_sminsamplevalue, td_refblackwhite.)
+* Some fields are conditionally printed based on TIFFFieldSet(), so we need to set the corresponding flags.
+* It calls helper functions like _TIFFPrettyPrintField() and _TIFFPrintField() for custom tags.
+
+## Structure for Fuzzing
+
+Do not need a full TIFF file on disk to fuzz TIFFPrintDirectory. We just need a valid-in-memory TIFF struct with initialized fields that the function accesses.
+
+What we minimally need to initialize:
+* tif->tif_dir (TIFFDirectory) → the actual image metadata
+* tif->tif_flags → some flags might be checked
+* tif->tif_tagmethods.printdir → optional, can be NULL
+* FILE* fd → can be stdout or a memory file (like fmemopen) if we want to capture output
+
+Everything else can be left zeroed unless we want to explore paths like colormaps or subIFDs.
+
+Since we want to test TIFFPrintDirectory() in isolation (unit fuzzing), then we would do the manual struct initialization approach. But for most fuzzing goals (finding real bugs), using a simple TIFF seed and libtiff’s normal loader is the preferred and robust path.
+
+## Fuzzing Idea
+
+fuzz harness takes arbitrary input bytes (const uint8_t* data, size_t size) and converts them into a TIFF struct to call the target function.
+
+* Map data into fields in tif->tif_dir:
+  * Width, height, bit depth, samples per pixel
+  * Subfile type flags
+  * Colormap (if any)
+  * Any arrays like _sminsamplevalue, _smaxsamplevalue, etc.
+* Call TIFFPrintDirectory(&tif, stdout, flags).
+* Optionally, wrap in fmemopen to capture output instead of printing to console.

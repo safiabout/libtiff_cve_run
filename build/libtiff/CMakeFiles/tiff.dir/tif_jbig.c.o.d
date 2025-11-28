@@ -1,7 +1,6 @@
 libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o: /src/libtiff/tif_jbig.c \
-  /src/libtiff/tiffiop.h /src/build/libtiff/tif_config.h \
-  /usr/include/fcntl.h /usr/include/features.h \
-  /usr/include/features-time64.h \
+  /src/libtiff/tiffiop.h /src/libtiff/tif_config.h /usr/include/fcntl.h \
+  /usr/include/features.h /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
   /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -45,9 +44,9 @@ libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o: /src/libtiff/tif_jbig.c \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h /usr/include/assert.h /usr/include/search.h \
-  /src/libtiff/tiffio.h /src/libtiff/tiff.h \
-  /src/build/libtiff/tiffconf.h /src/libtiff/tiffvers.h \
-  /usr/include/stdio.h /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /src/libtiff/tiffio.h /src/libtiff/tiff.h /src/libtiff/tiffconf.h \
+  /src/libtiff/tiffvers.h /usr/include/stdio.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
   /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \

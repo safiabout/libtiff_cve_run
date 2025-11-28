@@ -92,7 +92,7 @@ rewrite_EXTERNAL_OBJECTS =
 
 test/rewrite: test/CMakeFiles/rewrite.dir/rewrite_tag.c.o
 test/rewrite: test/CMakeFiles/rewrite.dir/build.make
-test/rewrite: libtiff/libtiff.so.5.3.0
+test/rewrite: libtiff/libtiff.a
 test/rewrite: port/libport.a
 test/rewrite: /usr/lib/x86_64-linux-gnu/libm.so
 test/rewrite: /usr/lib/x86_64-linux-gnu/libz.so

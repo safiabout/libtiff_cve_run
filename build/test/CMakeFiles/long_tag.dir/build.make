@@ -108,7 +108,7 @@ long_tag_EXTERNAL_OBJECTS =
 test/long_tag: test/CMakeFiles/long_tag.dir/long_tag.c.o
 test/long_tag: test/CMakeFiles/long_tag.dir/check_tag.c.o
 test/long_tag: test/CMakeFiles/long_tag.dir/build.make
-test/long_tag: libtiff/libtiff.so.5.3.0
+test/long_tag: libtiff/libtiff.a
 test/long_tag: port/libport.a
 test/long_tag: /usr/lib/x86_64-linux-gnu/libm.so
 test/long_tag: /usr/lib/x86_64-linux-gnu/libz.so

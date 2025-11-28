@@ -92,7 +92,7 @@ tiff__grayscale_EXTERNAL_OBJECTS =
 
 contrib/dbs/tiff-grayscale: contrib/dbs/CMakeFiles/tiff-grayscale.dir/tiff-grayscale.c.o
 contrib/dbs/tiff-grayscale: contrib/dbs/CMakeFiles/tiff-grayscale.dir/build.make
-contrib/dbs/tiff-grayscale: libtiff/libtiff.so.5.3.0
+contrib/dbs/tiff-grayscale: libtiff/libtiff.a
 contrib/dbs/tiff-grayscale: port/libport.a
 contrib/dbs/tiff-grayscale: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/dbs/tiff-grayscale: /usr/lib/x86_64-linux-gnu/libz.so

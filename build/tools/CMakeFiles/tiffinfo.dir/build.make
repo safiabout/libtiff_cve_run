@@ -92,7 +92,7 @@ tiffinfo_EXTERNAL_OBJECTS =
 
 tools/tiffinfo: tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.o
 tools/tiffinfo: tools/CMakeFiles/tiffinfo.dir/build.make
-tools/tiffinfo: libtiff/libtiff.so.5.3.0
+tools/tiffinfo: libtiff/libtiff.a
 tools/tiffinfo: port/libport.a
 tools/tiffinfo: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffinfo: /usr/lib/x86_64-linux-gnu/libz.so

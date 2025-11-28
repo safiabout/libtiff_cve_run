@@ -92,7 +92,7 @@ tiffmedian_EXTERNAL_OBJECTS =
 
 tools/tiffmedian: tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.o
 tools/tiffmedian: tools/CMakeFiles/tiffmedian.dir/build.make
-tools/tiffmedian: libtiff/libtiff.so.5.3.0
+tools/tiffmedian: libtiff/libtiff.a
 tools/tiffmedian: port/libport.a
 tools/tiffmedian: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiffmedian: /usr/lib/x86_64-linux-gnu/libz.so

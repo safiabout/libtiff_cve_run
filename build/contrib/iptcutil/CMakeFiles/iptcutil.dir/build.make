@@ -92,7 +92,7 @@ iptcutil_EXTERNAL_OBJECTS =
 
 contrib/iptcutil/iptcutil: contrib/iptcutil/CMakeFiles/iptcutil.dir/iptcutil.c.o
 contrib/iptcutil/iptcutil: contrib/iptcutil/CMakeFiles/iptcutil.dir/build.make
-contrib/iptcutil/iptcutil: libtiff/libtiff.so.5.3.0
+contrib/iptcutil/iptcutil: libtiff/libtiff.a
 contrib/iptcutil/iptcutil: port/libport.a
 contrib/iptcutil/iptcutil: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/iptcutil/iptcutil: /usr/lib/x86_64-linux-gnu/libz.so

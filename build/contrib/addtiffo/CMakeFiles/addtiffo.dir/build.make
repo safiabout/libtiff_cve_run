@@ -124,7 +124,7 @@ contrib/addtiffo/addtiffo: contrib/addtiffo/CMakeFiles/addtiffo.dir/addtiffo.c.o
 contrib/addtiffo/addtiffo: contrib/addtiffo/CMakeFiles/addtiffo.dir/tif_overview.c.o
 contrib/addtiffo/addtiffo: contrib/addtiffo/CMakeFiles/addtiffo.dir/tif_ovrcache.c.o
 contrib/addtiffo/addtiffo: contrib/addtiffo/CMakeFiles/addtiffo.dir/build.make
-contrib/addtiffo/addtiffo: libtiff/libtiff.so.5.3.0
+contrib/addtiffo/addtiffo: libtiff/libtiff.a
 contrib/addtiffo/addtiffo: port/libport.a
 contrib/addtiffo/addtiffo: /usr/lib/x86_64-linux-gnu/libm.so
 contrib/addtiffo/addtiffo: /usr/lib/x86_64-linux-gnu/libz.so

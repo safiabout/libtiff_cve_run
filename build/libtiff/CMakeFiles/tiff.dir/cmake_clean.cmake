@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  ".5"
   "CMakeFiles/tiff.dir/__/port/dummy.c.o"
   "CMakeFiles/tiff.dir/__/port/dummy.c.o.d"
   "CMakeFiles/tiff.dir/tif_aux.c.o"
@@ -80,10 +79,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tiff.dir/tif_write.c.o.d"
   "CMakeFiles/tiff.dir/tif_zip.c.o"
   "CMakeFiles/tiff.dir/tif_zip.c.o.d"
+  "libtiff.a"
   "libtiff.pdb"
-  "libtiff.so"
-  "libtiff.so.5"
-  "libtiff.so.5.3.0"
 )
 
 # Per-language clean rules from dependency scanning.

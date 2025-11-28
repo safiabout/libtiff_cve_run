@@ -92,7 +92,7 @@ pal2rgb_EXTERNAL_OBJECTS =
 
 tools/pal2rgb: tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.o
 tools/pal2rgb: tools/CMakeFiles/pal2rgb.dir/build.make
-tools/pal2rgb: libtiff/libtiff.so.5.3.0
+tools/pal2rgb: libtiff/libtiff.a
 tools/pal2rgb: port/libport.a
 tools/pal2rgb: /usr/lib/x86_64-linux-gnu/libm.so
 tools/pal2rgb: /usr/lib/x86_64-linux-gnu/libz.so

@@ -92,7 +92,7 @@ tiff2ps_EXTERNAL_OBJECTS =
 
 tools/tiff2ps: tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.o
 tools/tiff2ps: tools/CMakeFiles/tiff2ps.dir/build.make
-tools/tiff2ps: libtiff/libtiff.so.5.3.0
+tools/tiff2ps: libtiff/libtiff.a
 tools/tiff2ps: port/libport.a
 tools/tiff2ps: /usr/lib/x86_64-linux-gnu/libm.so
 tools/tiff2ps: /usr/lib/x86_64-linux-gnu/libz.so

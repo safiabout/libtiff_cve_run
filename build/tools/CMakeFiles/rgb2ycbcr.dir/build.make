@@ -92,7 +92,7 @@ rgb2ycbcr_EXTERNAL_OBJECTS =
 
 tools/rgb2ycbcr: tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.o
 tools/rgb2ycbcr: tools/CMakeFiles/rgb2ycbcr.dir/build.make
-tools/rgb2ycbcr: libtiff/libtiff.so.5.3.0
+tools/rgb2ycbcr: libtiff/libtiff.a
 tools/rgb2ycbcr: port/libport.a
 tools/rgb2ycbcr: /usr/lib/x86_64-linux-gnu/libm.so
 tools/rgb2ycbcr: /usr/lib/x86_64-linux-gnu/libz.so
